@@ -7,8 +7,8 @@ export PATH=/usr/local/bin:$PATH
 # See https://github.com/jamesob/docker-bitcoind/pull/16
 sudo /usr/bin/append-to-hosts "$(ip -4 route list match 0/0 | awk '{print $3 "\thost.docker.internal"}')"
 
-BITCOIN_DIR=/bitcoin/data
-BITCOIN_CONF=/bitcoin/bitcoin.conf
+BITCOIN_DIR=~/bitcoin/data
+BITCOIN_CONF=~/bitcoin/bitcoin.conf
 
 if [ -z "${BTC_RPCPASSWORD:-}" ]; then
   # Provide a random password.

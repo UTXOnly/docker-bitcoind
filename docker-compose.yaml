@@ -1,0 +1,10 @@
+version: "3"
+services:
+  bitcoind:
+    build: .   
+    ports:
+     - "8332:8332"
+     - "8333:8333"
+    volumes:
+     - /home/dock_v1/bitcoin_data:/bitcoin/data 
+     - /home/dock_v1/bitcoin.conf:/bitcoin/bitcoin.conf

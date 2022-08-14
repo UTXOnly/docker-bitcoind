@@ -7,7 +7,7 @@ export PATH=/usr/local/bin:$PATH
 # See https://github.com/jamesob/docker-bitcoind/pull/16
 sudo /usr/bin/append-to-hosts "$(ip -4 route list match 0/0 | awk '{print $3 "\thost.docker.internal"}')"
 
-BITCOIN_DIR=/bitcoin/data
+BITCOIN_DIR=/home/dock_v1/bitcoin/data
 BITCOIN_CONF=/bitcoin/bitcoin.conf
 
 if [ -z "${BTC_RPCPASSWORD:-}" ]; then
@@ -96,7 +96,7 @@ echo "Created new configuration at ${BITCOIN_CONF}"
 fi
 
 chmod 0600 "${BITCOIN_CONF}"
-chmod 777 "${BITCOIN_DIR}"
+
 
 if [ $# -eq 0 ]; then
   exec bitcoind -datadir=${BITCOIN_DIR} -conf=${BITCOIN_CONF}

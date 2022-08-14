@@ -17,7 +17,7 @@ for ver in $VERSIONS; do
   echo "--- building bitcoin $ver"
   echo
   echo
-  docker build -t "jamesob/bitcoind:${ver}" --build-arg "VERSION=${ver}" .
+  docker build -t "bhartford419/bitkernd:${ver}" --build-arg "VERSION=${ver}" .
   read -p "Push? (y/N): " confirm && [[ $confirm == [yY] ]] && \
-  docker push "jamesob/bitcoind:${ver}" "docker://docker.io/jamesob/bitcoind:${ver}"
+  docker push "bhartford419/bitkernd:${ver}" "docker://docker.io/bhartford419/bitkernd:${ver}"
 done

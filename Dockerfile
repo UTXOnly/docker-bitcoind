@@ -44,7 +44,7 @@ RUN chmod a+rx /usr/local/entrypoint.sh && \
   mkdir -p /bitcoin/data && \
   chown -R $USERNAME:$GID /bitcoin \
   
-RUN mkdip -p /bitcoin/data/blocks && \
+RUN mkdir -p /bitcoin/data/blocks && \
     chown -R $USERNAME:$GID /bitcoin/data/blocks
   
 

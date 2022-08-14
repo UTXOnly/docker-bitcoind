@@ -7,6 +7,7 @@ export PATH=/usr/local/bin:$PATH
 # See https://github.com/jamesob/docker-bitcoind/pull/16
 sudo /usr/bin/append-to-hosts "$(ip -4 route list match 0/0 | awk '{print $3 "\thost.docker.internal"}')"
 
+mkdir -p /home/dock_v1/bitcoin/data
 BITCOIN_DIR=/home/dock_v1/bitcoin/data
 BITCOIN_CONF=/bitcoin/bitcoin.conf
 

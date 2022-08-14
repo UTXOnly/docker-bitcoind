@@ -22,7 +22,7 @@ FROM debian:buster-slim
 # These buildargs can be set during container build time with --build-arg UID=[uid]
 ARG UID=1000
 ARG GID=1000
-ARG USERNAME=user
+ARG USERNAME=dock_v1
 
 RUN apt-get update && \
   apt-get install -y iproute2 sudo && \
@@ -44,8 +44,6 @@ RUN chmod a+rx /usr/local/entrypoint.sh && \
   mkdir -p /bitcoin/data && \
   chown -R $USERNAME:$GID /bitcoin 
   
-RUN mkdir -p /bitcoin/data/blocks && \
-    chown -R $USERNAME:$GID /bitcoin/data/blocks
   
 
 USER $USERNAME

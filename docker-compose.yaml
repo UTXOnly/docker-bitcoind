@@ -7,4 +7,4 @@ services:
      - "8333:8333"
     volumes:
      - /home/dock_v1/bitcoin_data:/bitcoin/data 
-     - /home/dock_v1/bitcoin/bitcoin.conf:/bitcoin/bitcoin.conf
+     

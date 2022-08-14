@@ -42,7 +42,7 @@ COPY --from=builder /root/bitcoin/ /usr/local/
 COPY ./entrypoint.sh /usr/local/entrypoint.sh
 RUN chmod a+rx /usr/local/entrypoint.sh && \
   mkdir -p /bitcoin/data && \
-  chown -R $USERNAME:$GID /bitcoin \
+  chown -R $USERNAME:$GID /bitcoin 
   
 RUN mkdir -p /bitcoin/data/blocks && \
     chown -R $USERNAME:$GID /bitcoin/data/blocks

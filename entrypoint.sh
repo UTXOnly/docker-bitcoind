@@ -9,7 +9,6 @@ sudo /usr/bin/append-to-hosts "$(ip -4 route list match 0/0 | awk '{print $3 "\t
 
 BITCOIN_DIR=/bitcoin/data
 BITCOIN_CONF=/bitcoin/bitcoin.conf
-USER="dock_v1"
 
 if [ -z "${BTC_RPCPASSWORD:-}" ]; then
   # Provide a random password.
@@ -93,7 +92,6 @@ EOF
 echo "Created new configuration at ${BITCOIN_CONF}"
 fi
 
-chown "${USER}":"${USER}" "${BITCOIN_CONF}"
 chmod 0600 "${BITCOIN_CONF}"
 
 if [ $# -eq 0 ]; then

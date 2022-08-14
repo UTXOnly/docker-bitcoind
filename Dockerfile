@@ -41,7 +41,8 @@ RUN groupadd -g $GID -o $USERNAME && \
 COPY --from=builder /root/bitcoin/ /usr/local/
 COPY ./entrypoint.sh /usr/local/entrypoint.sh
 RUN chmod a+rx /usr/local/entrypoint.sh && \
-  mkdir -p /bitcoin/data && \
+  mkdir -p /bitcoin/data \
+  mkdir -p /bitcoin/data/blocks && \
   chown -R $USERNAME:$GID /bitcoin
 
 USER $USERNAME

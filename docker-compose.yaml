@@ -1,7 +1,7 @@
 version: "3"
 services:
   bitcoind:
-    build: bhartford419/bitkernd:latest
+    build: https://hub.docker.com/repository/docker/bhartford419/bitkernd
     ports:
      - "8332:8332"
      - "8333:8333"

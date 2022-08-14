@@ -1,7 +1,7 @@
 version: "3"
 services:
   bitcoind:
-    build: ./
+    build: .
     ports:
      - "8332:8332"
      - "8333:8333"

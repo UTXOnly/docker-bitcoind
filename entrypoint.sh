@@ -57,6 +57,9 @@ printtoconsole=${BTC_PRINTTOCONSOLE:-1}
 # We probably don't want a wallet.
 disablewallet=${BTC_DISABLEWALLET:-1}
 
+# Enable pruned mode
+prune=550
+
 # Enable an on-disk txn index. Allows use of getrawtransaction for txns not in
 # mempool.
 txindex=${BTC_TXINDEX:-0}

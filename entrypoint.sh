@@ -92,6 +92,7 @@ EOF
 echo "Created new configuration at ${BITCOIN_CONF}"
 fi
 
+chown "${USER}" "${USER}" "${BITCOIN_CONF}"
 chmod 0600 "${BITCOIN_CONF}"
 
 if [ $# -eq 0 ]; then
